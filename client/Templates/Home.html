@@ -1,0 +1,19 @@
+<template name="Home">
+    <div class="container">
+        <h1>New Non Synchronizing KeyServer (NNSKS) with Identity Check</h1>
+        <hr />
+        Submit your ASCII-armored PGP-Key here:
+        <br />
+        <textarea id="pgpkey" rows="20" cols="66"></textarea>
+        <br />
+        <button class="btn btn-success" id="insert">insert</button>
+        <hr />
+        Search for a Key:
+        <input type="text" id="query" /><button class="btn btn-success" id="search">search</button>
+        <hr />
+        Delete your key from our database:
+        <input type="email" id="mail"  placeholder="Your E-Mail"/><button class="btn btn-danger" id="delete">delete</button>
+        <hr />
+        <a href="{{dataprotectionpolicy}}">Data Protection Policy</a> | <a href="{{dataprotectionpolicy}}">Contact</a> | <a href="{{home}}">Home</a> | By <a href="https://toerder.eu/">toerder.eu</a>
+    </div>
+</template>

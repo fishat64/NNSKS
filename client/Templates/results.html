@@ -1,0 +1,36 @@
+<template name="results">
+    <div class="container">
+        <h2><a href="https://gpg.toerder.eu/">Home</a> | <input type="text" id="query"> <button class="btn btn-primary" id="search">search</button> </h2>
+        <table class="table table striped">
+        <thead>
+            <tr>
+                <th>Short</th><th>Long</th><th>Fingerprint</th><th>uid</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result}}
+                <tr>
+                    <th>{{this.short}}</th>
+                    <th>{{this.long}}</th>
+                    <th><a href="/get/{{this.fingerprint}}">{{this.fingerprint}}</a>
+                        <a href="/DLKEY/{{this.fingerprint}}" class="btn btn-primary">DOWNLOAD</a>
+                        <br> {{>qrcode text=this.fingerprint size=128}}</th>
+                    <th>
+                        <ul>
+                        {{#each this.uids}}
+                            {{#if this.verified}}
+                                <li><a href="mailto:{{this.mail}}">{{this.mail}}</a> <span style="color: green;"><b>VERIFIED</b></span></li>
+                            {{else}}
+                                <li><span style="color: red;">{{this.mail}}</span></li>
+                            {{/if}}
+                        {{/each}}
+                        </ul>
+                    </th>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <hr />
+        <a href="{{dataprotectionpolicy}}">Data Protection Policy</a> | <a href="{{dataprotectionpolicy}}">Contact</a> | <a href="{{home}}">Home</a> | By <a href="https://toerder.eu/">toerder.eu</a>
+    </div>
+</template>

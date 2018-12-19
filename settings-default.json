@@ -1,0 +1,16 @@
+{
+	"privkey": ["-----BEGIN PGP PRIVATE KEY BLOCK-----\n" ,
+		"\n" ,
+		"-----END PGP PRIVATE KEY BLOCK-----\n"],
+	"pubkey": ["-----BEGIN PGP PUBLIC KEY BLOCK-----\n" ,
+		"\n" ,
+		"-----END PGP PUBLIC KEY BLOCK-----\n"],
+	"passphrase": "paaaasssphrase",
+	"mailuri" :"smtps://username:password@mail.example.tld:465",
+	"debug": false,
+	"public": {
+		"NNSKSURI": "https://gpg.toerder.eu/",
+		"dataprotectionpolicy": "https://toerder.eu/contact",
+		"home": "https://toerder.eu/"
+	}
+}
