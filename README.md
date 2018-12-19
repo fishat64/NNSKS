@@ -1,5 +1,5 @@
 # NNSKS
-##Installation for development
+## Installation for development
 [Install Meteor](https://www.meteor.com/install)
 ````
 curl https://install.meteor.com/ | sh
@@ -36,7 +36,7 @@ meteor run --settings settings-default.json
 Visit
 [http://localhost:3000/](http://localhost:3000/) in your Webbrowser
 
-##Deplpoyment
+## Deplpoyment
 
 See [https://guide.meteor.com/deployment.html](https://guide.meteor.com/deployment.html)
 
