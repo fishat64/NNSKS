@@ -18,7 +18,7 @@ Template.results.helpers({
                         emailpart+="EMAIL;"+cnt+";INTERNET:";
                     }
                     cnt++;
-                    emailpart+=entry.uids[i].mail+"\n";
+                    emailpart+=entry.uids[i].email+"\n";
                 }
             }
             entry.qrdata = "BEGIN:VCARD\n" +
