@@ -101,7 +101,7 @@ Meteor.methods({
                 text: (await enc(key, "Dear Sir or Madam,\n " +
                     "a public key was uploaded to the keyserver at "+Meteor.settings.public.NNSKSURI+", with this associated email address. \n" +
                     "If you have done that, please visit:\n "+Meteor.settings.public.NNSKSURI+"verify/"+securecode+" \n to verify this E-Mail Adress. \n" +
-                    "In any other case ignore this E-Mail.\n Best regards, \n Admin at "+Meteor.settings.public.home)).data
+                    "In any other case ignore this E-Mail.\n Best regards, \n Admin at "+Meteor.settings.public.home+"\n\n\n---\n Data Protection Policy can be found at "+Meteor.settings.public.dataprotectionpolicy)).data
             });
             ukey.insert({
                 _id: Random.id(),
@@ -220,7 +220,7 @@ Meteor.methods({
                     "a public key was uploaded to the keyserver at "+Meteor.settings.public.NNSKSURI+", with this associated email address. \n It was requested to be DELETED." +
                 "If you have done that, please visit following addresse(s) to delete your PGP-Key(s) associated with this E-Mail address from our Database \n" +
                 txt +
-                "In any other case ignore this E-Mail.\n Best regards, \n Admin at "+Meteor.settings.public.NNSKSURI
+                "In any other case ignore this E-Mail.\n Best regards, \n Admin at "+Meteor.settings.public.NNSKSURI+"\n\n\n---\n Data Protection Policy can be found at "+Meteor.settings.public.dataprotectionpolicy
         });
 
 

@@ -1,21 +1,25 @@
 <template name="results">
     <div class="container">
-        <h2><a href="https://gpg.toerder.eu/">Home</a> | <input type="text" id="query"> <button class="btn btn-primary" id="search">search</button> </h2>
+        <h2><a href="{{home}}">Home</a> | <input type="text" id="query"> <button class="btn btn-primary" id="search">search</button> </h2>
         <table class="table table striped">
         <thead>
             <tr>
-                <th>Short</th><th>Long</th><th>Fingerprint</th><th>uid</th>
+                <th>Short</th><th>Long</th><th>Fingerprint</th><th>Uid(s)</th><th>QR-Code (vCard)</th>
             </tr>
         </thead>
         <tbody>
             {{#each result}}
                 <tr>
-                    <th>{{this.short}}</th>
-                    <th>{{this.long}}</th>
-                    <th><a href="/get/{{this.fingerprint}}">{{this.fingerprint}}</a>
-                        <a href="/DLKEY/{{this.fingerprint}}" class="btn btn-primary">DOWNLOAD</a>
-                        <br> {{>qrcode text=this.fingerprint size=128}}</th>
-                    <th>
+                    <td>{{this.short}}</td>
+                    <td>{{this.long}}</td>
+                    <td>
+                        <a href="/DLKEY/{{this.fingerprint}}" class="btn btn-success"><span class="glyphicon glyphicon-save-file"></span></a>
+                        <a href="/get/{{this.fingerprint}}" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
+                        <br><br>
+                        <pre class="alert alert-info">{{split this.fingerprint 4 2}}</pre>
+                        {{>qrcode text=this.fingerprint size=128}}
+                    </td>
+                    <td>
                         <ul>
                         {{#each this.uids}}
                             {{#if this.verified}}
@@ -25,7 +29,10 @@
                             {{/if}}
                         {{/each}}
                         </ul>
-                    </th>
+                    </td>
+                    <td>
+                        {{>qrcode text=this.qrdata size=256}}
+                    </td>
                 </tr>
             {{/each}}
         </tbody>
