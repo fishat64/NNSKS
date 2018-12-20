@@ -4,6 +4,10 @@
 ````
 curl https://install.meteor.com/ | sh
 ````
+Install gpg2
+````
+sudo apt-get install gnupg2
+````
 
 Clone Repository
 ````
