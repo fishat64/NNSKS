@@ -25,6 +25,7 @@ Edit settings-default.json to your needs...
 		"-----END PGP PUBLIC KEY BLOCK-----\n"],
 	"passphrase": "paaaasssphrase",
 	"mailuri" :"smtps://username:password@mail.example.tld:465",
+	"mail": "mail@example.tld",
 	"debug": false,
 	"public": {
 		"NNSKSURI": "http://localhost:3000/",
