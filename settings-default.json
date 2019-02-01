@@ -7,6 +7,7 @@
 		"-----END PGP PUBLIC KEY BLOCK-----\n"],
 	"passphrase": "paaaasssphrase",
 	"mailuri" :"smtps://username:password@mail.example.tld:465",
+	"mail": "mail@example.tld",
 	"debug": false,
 	"public": {
 		"NNSKSURI": "https://gpg.toerder.eu/",

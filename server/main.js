@@ -95,7 +95,7 @@ Meteor.methods({
             let firstmail= emails.split("<")[i+1].split(">")[0];
             let securecode = Random.id(50);
             Email.send({
-                from: "admin@toerder.eu",
+                from: Meteor.settings.mail,
                 to: firstmail,
                 subject: "[encrypted message] verify your email address",
                 text: (await enc(key, "Dear Sir or Madam,\n " +
@@ -213,7 +213,7 @@ Meteor.methods({
         }
         txt+="\n";
         Email.send({
-            from: "admin@toerder.eu",
+            from: Meteor.settings.mail,
             to: mail,
             subject: "Request to delete your PGP-Key from our server",
             text: "Dear Sir or Madam,\n " +
